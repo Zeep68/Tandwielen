@@ -1,8 +1,8 @@
 const gears = [
     { id: 1, src: 'images/gear25.png', teeth: 25, x: 450, y: 150, direction: 1 }, // Drive gear
     { id: 2, src: 'images/gear57org.png', teeth: 57, x: 750, y: 300, direction: -1, syncWith: 1, connectionType: 'gear' },
-    { id: 3, src: 'images/gear9.png', teeth: 10, x: 850, y: 300, direction: 1, syncWith: 2, connectionType: 'direct' }, // Aangepast naar 10 tanden
-    { id: 4, src: 'images/gear12.png', teeth: 12, x: 650, y: 450, direction: -1, syncWith: 3, connectionType: 'belt' },
+    { id: 3, src: 'images/gear10.png', teeth: 10, x: 850, y: 300, direction: 1, syncWith: 2, connectionType: 'direct' }, // Aangepast naar 10 tanden
+    { id: 4, src: 'images/gear12.png', teeth: 12, x: 650, y: 450, direction: 1, syncWith: 3, connectionType: 'belt' },
     { id: 5, src: 'images/gear24-12org.png', teeth: 24, x: 600, y: 300, direction: 1, syncWith: 4, connectionType: 'direct' },
     { id: 6, src: 'images/gear16org.png', teeth: 16, x: 300, y: 300, direction: -1, syncWith: 5, connectionType: 'gear' },
     { id: 7, src: 'images/gear25bovenorg.png', teeth: 25, x: 450, y: 450, direction: 1, syncWith: 6, connectionType: 'gear' },
@@ -268,10 +268,13 @@ function makeDraggable() {
                 gear.style.top = `${y}px`;
 
                 const gearId = parseInt(gear.id.split('-')[1], 10);
+                const gearData = gears.find(g => g.id === gearId); // Haal de data op uit de gears-array
+                const halfWidth = (gearData.teeth * 5) / 2;
+                const halfHeight = (gearData.teeth * 5) / 2;
                 const label = document.querySelector(`.gear-label[data-id="${gearId}"]`);
                 if (label) {
-                    label.style.left = `${x + (gear.teeth * 5) / 2 - 10}px`; // Dynamisch centreren
-                    label.style.top = `${y + (gear.teeth * 5) / 2 - 5}px`;  // Dynamisch centreren
+                    label.style.left = `${x + halfWidth - 10}px`; // Dynamisch centreren
+                    label.style.top = `${y + halfHeight - 5}px`;  // Dynamisch centreren
                 }
             };
 
