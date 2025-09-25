@@ -60,20 +60,7 @@ button:hover {
     transform-origin: center center; /* Zet draaipunt in het midden */
     background-color: transparent; /* Zorg dat er geen achtergrond is */
     object-fit: contain; /* Zorgt dat de afbeelding correct wordt geschaald */
-}
 
-/* Labels boven tandwielen */
-.gear-label {
-    position: absolute;
-    font-size: 6px;
-    font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.8); /* Transparante achtergrond */
-    padding: 2px 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    pointer-events: none; /* Labels zijn niet interactief */
-    text-align: center;
-    color: #333;
 }
 
 /* Scrollbar stijl (optioneel, voor een modernere uitstraling) */
