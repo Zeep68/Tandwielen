@@ -1,0 +1,49 @@
+.hero {
+  background: var(--creme);
+  min-height: calc(100svh - var(--nav-h));
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 56px 0;
+}
+
+.kicker {
+  color: var(--orange);
+  font-size: 16px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+
+.headline {
+  color: var(--brown);
+  font-size: clamp(48px, 9vw, 104px);
+  line-height: 0.95;
+  margin: 12px 0 6px;
+}
+
+.sub {
+  color: var(--orange);
+  font-size: clamp(20px, 4vw, 34px);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+
+.tagline {
+  max-width: 640px;
+  margin: 22px auto 0;
+  font-size: clamp(16px, 1.6vw, 18px);
+  font-weight: 300;
+  color: var(--brown);
+}
+
+.josper { color: var(--orange); font-weight: 600; }
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.bird { width: 70px; height: auto; margin: 26px auto 0; display: block; }
