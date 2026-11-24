@@ -1,19 +1,19 @@
 const gears = [
-    { id: 1,  src: 'images/gear25.png',        teeth: 25, x: 450, y: 150, direction:  1, alignWith: 2 },
-    { id: 2,  src: 'images/gear57org.png',      teeth: 57, x: 750, y: 300, direction: -1, syncWith: 1,  alignWith: 1 },
-    { id: 3,  src: 'images/gear9.png',          teeth:  9, x: 850, y: 300, direction:  1, syncWith: 2,  coaxial: true },
-    { id: 4,  src: 'images/gear12.png',         teeth: 12, x: 650, y: 450, direction: -1, syncWith: 3,  belt: true },
-    { id: 5,  src: 'images/gear24-12org.png',   teeth: 24, x: 600, y: 300, direction:  1, syncWith: 4,  coaxial: true, alignWith: 6 },
-    { id: 6,  src: 'images/gear16org.png',      teeth: 16, x: 300, y: 300, direction: -1, syncWith: 5,  alignWith: 5 },
-    { id: 7,  src: 'images/gear25bovenorg.png', teeth: 25, x: 450, y: 450, direction:  1, syncWith: 6,  alignWith: 8 },
-    { id: 8,  src: 'images/gear189org.png',     teeth: 18, x: 600, y: 600, direction: -1, syncWith: 7,  alignWith: 7 },
-    { id: 9,  src: 'images/gear199org.png',     teeth: 19, x: 450, y: 300, direction:  1, syncWith: 8,  coaxial: true, alignWith: 10 },
-    { id: 10, src: 'images/gear369org.png',     teeth: 36, x: 300, y: 600, direction: -1, syncWith: 9,  alignWith: 9 },
-    { id: 11, src: 'images/gear9a.png',         teeth:  9, x: 850, y: 300, direction:  1, syncWith: 10, coaxial: true },
-    { id: 12, src: 'images/gear13.png',         teeth: 13, x: 150, y: 300, direction:  1, syncWith: 11, belt: true },
-    { id: 13, src: 'images/gear2113.png',       teeth: 21, x: 150, y: 300, direction:  1, syncWith: 12, coaxial: true, alignWith: 14 },
-    { id: 14, src: 'images/gear34org.png',      teeth: 34, x: 600, y: 150, direction: -1, syncWith: 13, alignWith: 13 },
-    { id: 15, src: 'images/gear25linksorg.png', teeth: 25, x: 600, y: 450, direction:  1, syncWith: 14, alignWith: 14 },
+    { id: 1,  src: 'gear25.png',          teeth: 25, x: 490, y: 420, direction:  1, alignWith: 2 },
+    { id: 2,  src: 'gear57org.png',     teeth: 57, x: 600, y: 303, direction: -1, syncWith: 1,  alignWith: 1 },
+    { id: 3,  src: 'gear10t.png',        teeth: 10, x: 850, y: 300, direction:  1, syncWith: 2,  coaxial: true },
+    { id: 4,  src: 'gear12.png',        teeth: 12, x: 650, y: 450, direction: -1, syncWith: 3,  belt: true },
+    { id: 5,  src: 'gear24-12org.png',  teeth: 24, x: 727, y: 151, direction:  1, syncWith: 4,  coaxial: true, alignWith: 6 },
+    { id: 6,  src: 'gear16org.png',     teeth: 16, x: 656, y: 150, direction: -1, syncWith: 5,  alignWith: 5 },
+    { id: 7,  src: 'gear25bovenorg.png',teeth: 25, x: 562, y: 182, direction:  1, syncWith: 6,  alignWith: 8 },
+    { id: 8,  src: 'gear189org.png',    teeth: 18, x: 512, y: 126, direction: -1, syncWith: 7,  alignWith: 7 },
+    { id: 9,  src: 'gear199org.png',    teeth: 19, x: 381, y: 191, direction:  1, syncWith: 8,  coaxial: true, alignWith: 10 },
+    { id: 10, src: 'gear369org.png',    teeth: 36, x: 222, y: 119, direction: -1, syncWith: 9,  alignWith: 9 },
+    { id: 11, src: 'gear9a.png',        teeth:  9, x: 850, y: 300, direction:  1, syncWith: 10, coaxial: true },
+    { id: 12, src: 'gear13.png',        teeth: 13, x: 150, y: 300, direction:  1, syncWith: 11, belt: true },
+    { id: 13, src: 'gear2113.png',      teeth: 21, x: 215, y: 392, direction:  1, syncWith: 12, coaxial: true, alignWith: 14 },
+    { id: 14, src: 'gear34org.png',     teeth: 34, x: 282, y: 442, direction: -1, syncWith: 13, alignWith: 13 },
+    { id: 15, src: 'gear25linksorg.png',teeth: 25, x: 200, y: 551, direction:  1, syncWith: 14, alignWith: 14 },
 ];
 
 const startAngles = {
@@ -30,26 +30,10 @@ const startAngles = {
     15: -44.8,
 };
 
-
-// Handmatige size overrides per tandwiel (in pixels).
-// Standaard = teeth * 5. Wijzig getallen om individuele tandwielen groter/kleiner te maken.
-// Verwijder de // om een aanpassing te activeren.
 const gearSizes = {
-    1: 125,    // standaard 125 (25 tanden)
-    2: 272,    // standaard 285 (57 tanden) - AANGEPAST
-    3: 45,     // standaard 45  (9 tanden)
-    4: 60,     // standaard 60  (12 tanden)
-    5: 123,    // standaard 120 (24 tanden)
-    6: 86,     // standaard 80  (16 tanden)
-    7: 128,    // standaard 125 (25 tanden)
-    8: 94,     // standaard 90  (18 tanden)
-    9: 102,     // standaard 95  (19 tanden)
-    10: 181,   // standaard 180 (36 tanden)
-    11: 45,    // standaard 45  (9 tanden)
-    12: 65,    // standaard 65  (13 tanden)
-    13: 107,   // standaard 105 (21 tanden)
-    14: 170,   // standaard 170 (34 tanden)
-    15: 128,   // standaard 125 (25 tanden)
+    1: 125, 2: 272, 3: 45,  4: 60,  5: 123,
+    6: 86,  7: 128, 8: 94,  9: 102, 10: 181,
+    11: 45, 12: 65, 13: 107, 14: 170, 15: 128,
 };
 
 function getGearSize(gear) {
@@ -67,26 +51,25 @@ let speedFactor = 1;
 let globalDirection = 1;
 let lastTime = 0;
 let animationFrame;
-let canvas, ctx;
+let overlayCanvas, ctx;
 
 function initCanvas() {
     const container = document.getElementById('gear-container');
-    canvas = document.createElement('canvas');
-    canvas.id = 'gear-canvas';
-    canvas.style.position = 'absolute';
-    canvas.style.top = '0';
-    canvas.style.left = '0';
-    canvas.style.pointerEvents = 'none';
-    canvas.style.zIndex = '100';
-    container.appendChild(canvas);
+    overlayCanvas = document.createElement('canvas');
+    overlayCanvas.id = 'gear-canvas';
+    overlayCanvas.style.position = 'absolute';
+    overlayCanvas.style.top = '0';
+    overlayCanvas.style.left = '0';
+    overlayCanvas.style.pointerEvents = 'none';
+    overlayCanvas.style.zIndex = '100';
+    container.appendChild(overlayCanvas);
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
 }
 
 function resizeCanvas() {
-    const container = document.getElementById('gear-container');
-    canvas.width  = container.offsetWidth  || 1400;
-    canvas.height = container.offsetHeight || 1000;
+    if (!overlayCanvas) return;
+    overlayCanvas.width  = 1400;
+    overlayCanvas.height = 1000;
 }
 
 function gearCenter(gear) {
@@ -102,14 +85,13 @@ function getTotalAngle(gearId) {
     return (rotations[gearId]?.angle || 0) + (startAngles[gearId] || 0);
 }
 
-// Normaliseer hoek naar [0, 360)
 function normalizeAngle(deg) {
     return ((deg % 360) + 360) % 360;
 }
 
 function drawLines() {
     if (!ctx) return;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, overlayCanvas.width, overlayCanvas.height);
 
     gears.forEach(gear => {
         if (gear.visible === false) return;
@@ -137,42 +119,30 @@ function drawLines() {
         ctx.lineTo(endX, endY);
         ctx.stroke();
 
-        // Pijl aan eindpunt van lijn
-        const arrowSize = locked ? 14 : 10;
+        const arrowSize  = locked ? 14 : 10;
         const arrowAngle = Math.PI / 6;
         ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(endX, endY);
-        ctx.lineTo(
-            endX - arrowSize * Math.cos(rad - arrowAngle),
-            endY - arrowSize * Math.sin(rad - arrowAngle)
-        );
-        ctx.lineTo(
-            endX - arrowSize * Math.cos(rad + arrowAngle),
-            endY - arrowSize * Math.sin(rad + arrowAngle)
-        );
+        ctx.lineTo(endX - arrowSize * Math.cos(rad - arrowAngle), endY - arrowSize * Math.sin(rad - arrowAngle));
+        ctx.lineTo(endX - arrowSize * Math.cos(rad + arrowAngle), endY - arrowSize * Math.sin(rad + arrowAngle));
         ctx.closePath();
         ctx.fill();
 
-        // Oranje cirkel op partner middelpunt
         ctx.beginPath();
         ctx.arc(cB.x, cB.y, 6, 0, Math.PI * 2);
         ctx.strokeStyle = '#ffaa00';
         ctx.lineWidth = 2;
         ctx.stroke();
 
-        // Toon hoek-label NAAST de pijl bij bevroren tandwielen
         if (locked) {
-            const angle = normalizeAngle(totalAngle);
-            // Plaats label iets voorbij de pijl in dezelfde richting
+            const angle = (normalizeAngle(totalAngle) + 90) % 360;  // canvas→kompas: +90°
             const labelDist = 22;
             const labelX = endX + Math.cos(rad) * labelDist;
             const labelY = endY + Math.sin(rad) * labelDist;
-            ctx.fillStyle = '#00aa33';
             ctx.font = 'bold 16px Arial';
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
-            // Witte achtergrond voor leesbaarheid
             const text = `${angle.toFixed(1)}°`;
             const textWidth = ctx.measureText(text).width;
             ctx.fillStyle = 'rgba(255,255,255,0.85)';
@@ -187,25 +157,18 @@ function drawLines() {
     ctx.globalAlpha = 1;
 }
 
-
-
 function saveAsDefault() {
     gears.forEach(gear => {
         const img = document.getElementById(`gear-${gear.id}`);
         if (img) {
-            const newX = parseInt(img.style.left, 10);
-            const newY = parseInt(img.style.top,  10);
-            gear.x = newX;
-            gear.y = newY;
-            defaultPositions[gear.id] = { x: newX, y: newY };
+            gear.x = parseInt(img.style.left, 10);
+            gear.y = parseInt(img.style.top,  10);
+            defaultPositions[gear.id] = { x: gear.x, y: gear.y };
         }
     });
     savePositions();
     showAnglesPanel('Huidige posities opgeslagen als standaard!');
-    setTimeout(() => {
-        const panel = document.getElementById('angles-panel');
-        if (panel) panel.remove();
-    }, 2000);
+    setTimeout(() => { const p = document.getElementById('angles-panel'); if (p) p.remove(); }, 2000);
 }
 
 function showAnglesPanel(text) {
@@ -213,47 +176,30 @@ function showAnglesPanel(text) {
     if (!panel) {
         panel = document.createElement('div');
         panel.id = 'angles-panel';
-        panel.style.position = 'fixed';
-        panel.style.bottom = '20px';
-        panel.style.right = '20px';
-        panel.style.background = 'rgba(255, 255, 255, 0.95)';
-        panel.style.border = '2px solid #00aa33';
-        panel.style.borderRadius = '8px';
-        panel.style.padding = '12px 16px';
-        panel.style.fontFamily = 'monospace';
-        panel.style.fontSize = '14px';
-        panel.style.color = '#00aa33';
-        panel.style.zIndex = '9999';
-        panel.style.maxWidth = '300px';
-        panel.style.whiteSpace = 'pre-line';
-        panel.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
-        const closeBtn = document.createElement('span');
-        closeBtn.textContent = ' ✕';
-        closeBtn.style.cursor = 'pointer';
-        closeBtn.style.float = 'right';
-        closeBtn.style.color = '#999';
-        closeBtn.style.marginLeft = '10px';
-        closeBtn.onclick = () => panel.remove();
-        panel.appendChild(closeBtn);
+        Object.assign(panel.style, {
+            position: 'fixed', bottom: '20px', right: '20px',
+            background: 'rgba(255,255,255,0.95)', border: '2px solid #00aa33',
+            borderRadius: '8px', padding: '12px 16px', fontFamily: 'monospace',
+            fontSize: '14px', color: '#00aa33', zIndex: '9999',
+            maxWidth: '300px', whiteSpace: 'pre-line',
+            boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
+        });
         document.body.appendChild(panel);
     }
-    panel.innerHTML = text.replace(/\n/g, '<br>') + '<br><span style="cursor:pointer;color:#999;float:right" onclick="document.getElementById(\'angles-panel\').remove()">✕ sluit</span>';
+    panel.innerHTML = text.replace(/\n/g, '<br>') +
+        '<br><span style="cursor:pointer;color:#999;float:right" onclick="document.getElementById(\'angles-panel\').remove()">✕ sluit</span>';
 }
 
-// Bevries alle tandwielen op huidige positie + toon hoeken
 function freezeAll() {
     stopRotation();
     let output = 'Gradenstanden van groene lijnen:\n\n';
     gears.forEach(gear => {
-        if (gear.visible === false) return;
-        if (!gear.alignWith) return;
+        if (gear.visible === false || !gear.alignWith) return;
         rotations[gear.id].locked = true;
         lockedGears.add(gear.id);
-        const angle = normalizeAngle(getTotalAngle(gear.id));
-        output += `Tandwiel ${gear.id}: ${angle.toFixed(1)}°\n`;
+        output += `Tandwiel ${gear.id}: ${((normalizeAngle(getTotalAngle(gear.id)) + 90) % 360).toFixed(1)}°\n`;
     });
     drawLines();
-    // console.log(output);
     showAnglesPanel(output);
 }
 
@@ -263,30 +209,39 @@ function renderGears() {
         if (c.id !== 'gear-canvas') container.removeChild(c);
     });
 
+    const base = window.GEAR_IMAGE_BASE || 'images/';
+
     gears.forEach(gear => {
-        const img = document.createElement('img');
-        img.id = `gear-${gear.id}`;
-        img.src = gear.src;
-        img.classList.add('gear');
         const actualSize = getGearSize(gear);
-        img.style.width    = `${actualSize}px`;
-        img.style.height   = `${actualSize}px`;
-        img.style.left     = `${gear.x}px`;
-        img.style.top      = `${gear.y}px`;
-        img.style.position = 'absolute';
+
+        const img = document.createElement('img');
+        img.id  = `gear-${gear.id}`;
+        img.src = base + gear.src;
+        img.classList.add('gear');
+        Object.assign(img.style, {
+            width: `${actualSize}px`, height: `${actualSize}px`,
+            left: `${gear.x}px`,     top: `${gear.y}px`,
+            position: 'absolute',
+        });
 
         const label = document.createElement('span');
         label.classList.add('gear-label');
         label.dataset.id  = gear.id;
         label.textContent = `ID: ${gear.id}`;
-        label.style.position = 'absolute';
-        label.style.left     = `${gear.x}px`;
-        label.style.top      = `${gear.y - 20}px`;
-        label.style.zIndex   = '50';
+        Object.assign(label.style, {
+            position: 'absolute', display: 'none',
+            left: `${gear.x}px`, top: `${gear.y - 20}px`,
+            zIndex: '50',
+        });
 
         if (gear.visible === false) {
             img.style.display   = 'none';
             label.style.display = 'none';
+        }
+
+        if ([4, 12].includes(gear.id)) {
+            img.style.zIndex   = '200';
+            label.style.zIndex = '201';
         }
 
         container.appendChild(img);
@@ -294,8 +249,16 @@ function renderGears() {
         rotations[gear.id] = { angle: 0, locked: false };
     });
 
-    if (canvas) container.appendChild(canvas);
-    resizeCanvas();
+    if (overlayCanvas) container.appendChild(overlayCanvas);
+
+    // Gears 4 en 12 naar voren halen door ze achteraan de DOM te zetten (na overlay canvas)
+    [4, 12].forEach(id => {
+        const img   = document.getElementById(`gear-${id}`);
+        const label = document.querySelector(`.gear-label[data-id="${id}"]`);
+        if (img)   { img.style.zIndex = '200';   container.appendChild(img);   }
+        if (label) { label.style.zIndex = '201'; container.appendChild(label); }
+    });
+
     drawLines();
 }
 
@@ -303,16 +266,13 @@ function savePositions() {
     const positions = {};
     gears.forEach(gear => {
         const img = document.getElementById(`gear-${gear.id}`);
-        if (img) positions[gear.id] = {
-            x: parseInt(img.style.left, 10),
-            y: parseInt(img.style.top,  10),
-        };
+        if (img) positions[gear.id] = { x: parseInt(img.style.left, 10), y: parseInt(img.style.top, 10) };
     });
     localStorage.setItem('gearPositions', JSON.stringify(positions));
 }
 
 function loadPositions() {
-    const saved = JSON.parse(localStorage.getItem('gearPositions'));
+    const saved = JSON.parse(localStorage.getItem('gearPositions') || 'null');
     if (saved) gears.forEach(gear => {
         if (saved[gear.id]) { gear.x = saved[gear.id].x; gear.y = saved[gear.id].y; }
     });
@@ -327,11 +287,7 @@ function resetPositions() {
         gear.y = defaultPositions[gear.id].y;
         rotations[gear.id] = { angle: 0, locked: false };
         const img = document.getElementById(`gear-${gear.id}`);
-        if (img) {
-            img.style.left      = `${gear.x}px`;
-            img.style.top       = `${gear.y}px`;
-            img.style.transform = 'rotate(0deg)';
-        }
+        if (img) { img.style.left = `${gear.x}px`; img.style.top = `${gear.y}px`; img.style.transform = 'rotate(0deg)'; }
         const lbl = document.querySelector(`.gear-label[data-id="${gear.id}"]`);
         if (lbl) { lbl.style.left = `${gear.x}px`; lbl.style.top = `${gear.y - 20}px`; }
     });
@@ -347,19 +303,21 @@ function calculateRotations() {
     const driving = gears.find(g => g.id === drivingGearId);
     const omega0  = 2 * Math.PI * 0.04;
     rotations[driving.id] = { ...rotations[driving.id], omega: omega0, direction: driving.direction * globalDirection };
-
     gears.forEach(gear => {
         if (gear.id === drivingGearId) return;
         const parent = getParentGear(gear);
-        const pr     = rotations[parent.id];
-        const omega  = pr ? (gear.coaxial ? pr.omega : pr.omega * (parent.teeth / gear.teeth)) : omega0 * (driving.teeth / gear.teeth);
-        const dir    = pr ? pr.direction * ((gear.coaxial || gear.belt) ? 1 : -1) : gear.direction * globalDirection;
-        rotations[gear.id] = { ...rotations[gear.id], omega, direction: dir };
+        const pr = rotations[parent.id];
+        rotations[gear.id] = {
+            ...rotations[gear.id],
+            omega:     pr ? (gear.coaxial ? pr.omega : pr.omega * (parent.teeth / gear.teeth))
+                          : omega0 * (driving.teeth / gear.teeth),
+            direction: pr ? pr.direction * (gear.belt || gear.coaxial ? 1 : -1) * (gear.flip ? -1 : 1)
+                          : gear.direction * globalDirection,
+        };
     });
 }
 
 function startRotation() {
-    // Reset locked status
     lockedGears.clear();
     gears.forEach(g => { if (rotations[g.id]) rotations[g.id].locked = false; });
     isRotating = true;
@@ -376,7 +334,6 @@ function stopRotation() {
 function animate(time) {
     const delta = (time - lastTime) / 1000;
     lastTime = time;
-
     gears.forEach(gear => {
         const rot = rotations[gear.id];
         if (rot && !rot.locked) {
@@ -385,25 +342,24 @@ function animate(time) {
             if (img) img.style.transform = `rotate(${rot.angle % 360}deg)`;
         }
     });
-
     drawLines();
-
     if (isRotating) animationFrame = requestAnimationFrame(animate);
 }
 
 function makeDraggable() {
     document.querySelectorAll('.gear').forEach(gearEl => {
-        let offsetX, offsetY;
         gearEl.addEventListener('mousedown', e => {
             const rect = gearEl.getBoundingClientRect();
-            offsetX = e.clientX - rect.left;
-            offsetY = e.clientY - rect.top;
-            const move = event => {
-                const x = event.clientX - offsetX;
-                const y = event.clientY - offsetY;
+            const offsetX = e.clientX - rect.left;
+            const offsetY = e.clientY - rect.top;
+            const move = ev => {
+                const container = document.getElementById('gear-container');
+                const cRect = container.getBoundingClientRect();
+                const x = ev.clientX - cRect.left - offsetX;
+                const y = ev.clientY - cRect.top  - offsetY;
                 gearEl.style.left = `${x}px`;
                 gearEl.style.top  = `${y}px`;
-                const id  = parseInt(gearEl.id.split('-')[1], 10);
+                const id = parseInt(gearEl.id.split('-')[1], 10);
                 const lbl = document.querySelector(`.gear-label[data-id="${id}"]`);
                 if (lbl) { lbl.style.left = `${x}px`; lbl.style.top = `${y - 20}px`; }
                 drawLines();
@@ -419,22 +375,21 @@ function makeDraggable() {
     });
 }
 
-document.getElementById('increaseSpeedButton').addEventListener('click', () => { speedFactor *= 1.2; });
-document.getElementById('decreaseSpeedButton').addEventListener('click', () => { speedFactor /= 1.2; });
-document.getElementById('reverseButton').addEventListener('click', () => {
-    globalDirection *= -1;
-    if (isRotating) { stopRotation(); startRotation(); } else calculateRotations();
-});
-
 document.addEventListener('DOMContentLoaded', () => {
     loadPositions();
     initCanvas();
-    ctx = canvas.getContext('2d');
+    ctx = overlayCanvas.getContext('2d');
     renderGears();
     makeDraggable();
+
     document.getElementById('startButton').addEventListener('click', startRotation);
-    // Stop = bevries alles + toon hoeken
     document.getElementById('stopButton').addEventListener('click', freezeAll);
+    document.getElementById('increaseSpeedButton').addEventListener('click', () => { speedFactor *= 1.2; });
+    document.getElementById('decreaseSpeedButton').addEventListener('click', () => { speedFactor /= 1.2; });
+    document.getElementById('reverseButton').addEventListener('click', () => {
+        globalDirection *= -1;
+        if (isRotating) { stopRotation(); startRotation(); } else calculateRotations();
+    });
     document.getElementById('resetButton').addEventListener('click', resetPositions);
     const saveBtn = document.getElementById('saveDefaultButton');
     if (saveBtn) saveBtn.addEventListener('click', saveAsDefault);
