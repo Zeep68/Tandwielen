@@ -7,7 +7,7 @@ const gears = [
     { id: 6,  src: 'gear16org.png',     teeth: 16, x: 656, y: 150, direction: -1, syncWith: 5,  alignWith: 5 },
     { id: 7,  src: 'gear25bovenorg.png',teeth: 25, x: 562, y: 182, direction:  1, syncWith: 6,  alignWith: 8 },
     { id: 8,  src: 'gear189org.png',    teeth: 18, x: 512, y: 126, direction: -1, syncWith: 7,  alignWith: 7 },
-    { id: 9,  src: 'gear199org.png',    teeth: 19, x: 381, y: 191, direction:  1, syncWith: 8,  coaxial: true, alignWith: 10 },
+    { id: 9,  src: 'gear199org.png',    teeth: 19, x: 381, y: 191, direction:  -1, syncWith: 8,  coaxial: true, alignWith: 10 },
     { id: 10, src: 'gear369org.png',    teeth: 36, x: 222, y: 119, direction: -1, syncWith: 9,  alignWith: 9 },
     { id: 11, src: 'gear9a.png',        teeth:  9, x: 850, y: 300, direction:  1, syncWith: 10, coaxial: true },
     { id: 12, src: 'gear13.png',        teeth: 13, x: 150, y: 300, direction:  1, syncWith: 11, belt: true },
