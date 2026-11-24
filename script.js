@@ -1,5 +1,5 @@
 const gears = [
-    { id: 1,  src: 'gear25.png',          teeth: 25, x: 490, y: 420, direction:  1, alignWith: 2 },
+    { id: 1,  src: 'gear25.png',          teeth: 25, x: 490, y: 420, direction: -1, alignWith: 2 },
     { id: 2,  src: 'gear57org.png',     teeth: 57, x: 600, y: 303, direction: -1, syncWith: 1,  alignWith: 1 },
     { id: 3,  src: 'gear10t.png',        teeth: 10, x: 850, y: 300, direction:  1, syncWith: 2,  coaxial: true },
     { id: 4,  src: 'gear12.png',        teeth: 12, x: 650, y: 450, direction: -1, syncWith: 3,  belt: true },
